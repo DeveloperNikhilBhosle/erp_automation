@@ -15,8 +15,8 @@ module.exports = defineConfig({
     },
     env: {
 
-      ERP_LOGIN: process.env.CYPRESS_USERNAME,
-      ERP_PASSWORD: process.env.CYPRESS_PASSWORD
+      USERNAME: process.env.CYPRESS_USERNAME,
+      PASSWORD: process.env.CYPRESS_PASSWORD
     }
 
   },
