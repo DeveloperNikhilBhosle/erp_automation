@@ -20,5 +20,5 @@ jobs:
           env: true
           spec: cypress/e2e/erp-in-out/checkin.cy.js
         env: 
-           CYPRESS_USERNAME: ${{ secrets.CYPRESS_ERP_LOGIN }}
-           CYPRESS_PASSWORD: ${{ secrets.CYPRESS_ERP_PASSWORD }}
+           CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
+           CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
