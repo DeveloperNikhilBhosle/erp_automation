@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 
-describe('Employee Checkin', function () {
+describe('Employee CheckOut', function () {
 
     it('daily checout', function () {
         cy.visit('https://erp.atriina.com/login#login');

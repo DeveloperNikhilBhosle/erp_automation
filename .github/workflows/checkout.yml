@@ -1,4 +1,4 @@
-name: cypress end to end
+name: ERP CheckOut
 
 on:
   # push:
