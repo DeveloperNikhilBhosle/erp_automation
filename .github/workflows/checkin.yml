@@ -8,17 +8,18 @@ on:
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-    steps:
-      
-      - name: Checkout
-        uses: actions/checkout@v3
+  steps:
+  - name: Secrets Username
+    run: echo "My Secret Username is ${{ secrets.CYPRESS_USERNAME }}"
 
-      - name: Cypress run 🧪
-        uses: cypress-io/github-action@v6
-        with: 
-          browser: chrome
-          env: true
-          spec: cypress/e2e/erp-in-out/checkin.cy.js
-        env: 
-           CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
-           CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
+  - name: Checkout
+    uses: actions/checkout@v3
+
+  - name: Cypress run 🧪
+    uses: cypress-io/github-action@v6
+    with: 
+      browser: chrome
+      spec: cypress/e2e/erp-in-out/checkin.cy.js
+    env: 
+      CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
+      CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
