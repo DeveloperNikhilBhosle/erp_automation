@@ -1,22 +1,26 @@
 name: cypress end to end
 
 on:
-  push :
+  push:
   # schedule:
   #   - cron: '30 4 * * 1-5'
 
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
-  steps:
-  - name: Checkout
-    uses: actions/checkout@v3
+    steps:
+      
+      - name: Secrets Username
+        run: echo "My Secret Username is ${{ secrets.CYPRESS_USERNAME }}"
+        
+      - name: Checkout
+        uses: actions/checkout@v3
 
-  - name: Cypress run 🧪
-    uses: cypress-io/github-action@v6
-    with: 
-      browser: chrome
-      spec: cypress/e2e/erp-in-out/checkin.cy.js
-    env: 
-      CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
-      CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
+      - name: Cypress run 🧪
+        uses: cypress-io/github-action@v6
+        with: 
+          browser: chrome
+          env: true
+        env: 
+           CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
+           CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
