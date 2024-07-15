@@ -21,7 +21,7 @@ jobs:
         with: 
           browser: chrome
           env: true
-          spec: cypress/e2e/erp-in-out/checkout.cy.js
+          spec: cypress/e2e/erp-in-out/checkin.cy.js
         env: 
            CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
            CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
