@@ -5,7 +5,7 @@ describe('Employee Checkin', function () {
 
     it('daily checout', function () {
         cy.visit('https://erp.atriina.com/login#login');
-        cy.get('#login_email').type(Cypress.env('EMAIL'), { log: false });
+        cy.get('#login_email').type(Cypress.env('USERNAME'), { log: false });
         cy.get('#login_password').type(Cypress.env('PASSWORD'), { log: false });
         cy.get('.btn-login').contains('Login').click();
         cy.get('#navbar-search').click().clear().type("Checkin");
