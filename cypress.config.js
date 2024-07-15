@@ -13,11 +13,11 @@ module.exports = defineConfig({
       return config;
 
     },
-    // env: {
-    //   // Nikhil
-    //   ERP_LOGIN: process.env.CYPRESS_ERP_LOGIN,
-    //   ERP_PASSWORD: process.env.CYPRESS_ERP_PASSWORD
-    // }
+    env: {
+
+      ERP_LOGIN: process.env.CYPRESS_USERNAME,
+      ERP_PASSWORD: process.env.CYPRESS_PASSWORD
+    }
 
   },
 });
