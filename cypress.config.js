@@ -13,11 +13,11 @@ module.exports = defineConfig({
       return config;
 
     },
-    // env: {
+    env: {
 
-    //   USERNAME: process.env.CYPRESS_USERNAME,
-    //   PASSWORD: process.env.CYPRESS_PASSWORD
-    // }
+      USERNAME: "nikhil.bhosle@atriina.com ",
+      PASSWORD: "SaiRam@02"
+    }
 
   },
 });

@@ -2,8 +2,8 @@ name: cypress end to end
 
 on:
   push:
-  # schedule:
-  #   - cron: '30 4 * * 1-5'
+  schedule:
+    - cron: '30 4 * * 1-5'
 
 jobs:
   cypress-run:
@@ -21,6 +21,7 @@ jobs:
         with: 
           browser: chrome
           env: true
+          spec: cypress/e2e/erp-in-out/checkout.cy.js
         env: 
            CYPRESS_USERNAME: ${{ secrets.CYPRESS_USERNAME }}
            CYPRESS_PASSWORD: ${{ secrets.CYPRESS_PASSWORD }}
