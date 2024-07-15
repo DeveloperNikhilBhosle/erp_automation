@@ -15,8 +15,8 @@ module.exports = defineConfig({
     },
     env: {
       // Nikhil
-      EMAIL: "",
-      PASSWORD: ""
+      EMAIL: process.env.CYPRESS_ERP_LOGIN,
+      PASSWORD: process.env.CYPRESS_ERP_PASSWORD
     }
 
   },
