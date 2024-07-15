@@ -50,8 +50,8 @@ describe('Employee Checkin', function () {
 
 function CheckInERP() {
     cy.get('.btn').contains("Create a new Employee Checkin").click();
-    cy.get('input[data-fieldname="employee"]').click().clear().type("HR-EMP-00022"); // NIKHIL 
-    cy.get('ul > li').contains('Nikhil Madhav Bhosle').click();
+    cy.get('input[data-fieldname="employee"]').click().clear().type("HR-EMP-00022{enter}"); // NIKHIL 
+    // cy.get('ul > li').contains('Nikhil Madhav Bhosle').click();
     cy.get('select[data-doctype="Employee Checkin"]').select("IN");
-    // cy.get('button[data-label="Save"]').click();
+    cy.get('button[data-label="Save"]').click();
 }
