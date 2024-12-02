@@ -58,15 +58,14 @@ describe('Employee CheckOut', function () {
     });
 
 
-
-
 });
 
 
 function CheckOUTERP() {
     cy.get('button[data-label="Add Employee Checkin"]').click();
-    cy.get('input[data-fieldname="employee"]').click().clear().type("HR-EMP-00022{enter}"); // NIKHIL 
+    // cy.get('input[data-fieldname="employee"]').click().clear().type("HR-EMP-00022{enter}"); // NIKHIL 
     // cy.get('ul > li').contains('Nikhil Madhav Bhosle').click();
-    cy.get('select[data-doctype="Employee Checkin"]').select("OUT");
-    cy.get('button[data-label="Save"]').click();
+    // cy.get('select[data-doctype="Employee Checkin"]').select("OUT");
+    cy.get('select[data-fieldname="log_type"]').select('OUT');
+    // cy.get('button[data-label="Save"]').click();
 }
