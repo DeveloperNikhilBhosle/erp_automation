@@ -67,5 +67,5 @@ function CheckOUTERP() {
     // cy.get('ul > li').contains('Nikhil Madhav Bhosle').click();
     // cy.get('select[data-doctype="Employee Checkin"]').select("OUT");
     cy.get('select[data-fieldname="log_type"]').select('OUT');
-    // cy.get('button[data-label="Save"]').click();
+    cy.get('button[data-label="Save"]').click();
 }
